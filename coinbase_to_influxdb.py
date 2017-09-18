@@ -56,6 +56,6 @@ if __name__ == "__main__":
     db_connect.manage_db()
     client = CoinBase(API_KEY, API_PRIVATE)
     while True:
+        time.sleep(30)
         for i in client.get_currentmoney():
             db_connect.push_data(i)
-            time.sleep(30)

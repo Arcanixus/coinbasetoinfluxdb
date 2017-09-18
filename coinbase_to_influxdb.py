@@ -55,6 +55,7 @@ if __name__ == "__main__":
     db_connect = InfluxdbManagement(INFLUX_HOST, INFLUX_PORT, INFLUX_DB)
     db_connect.manage_db()
     client = CoinBase(API_KEY, API_PRIVATE)
+    print("start")
     while True:
         time.sleep(30)
         for i in client.get_currentmoney():
